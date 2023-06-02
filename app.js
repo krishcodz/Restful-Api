@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/wikiDB", { useNewUrlParser: true });
+mongoose.connect("mongodb://127.0.0.1:27017{localhost}/wikiDB", { useNewUrlParser: true });
 mongoose.set('strictQuery', true);
 
 const articleschema = new mongoose.Schema({
